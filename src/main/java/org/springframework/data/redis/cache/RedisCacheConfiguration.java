@@ -151,7 +151,7 @@ public class RedisCacheConfiguration {
 
 		Assert.notNull(prefix, "Prefix must not be null!");
 
-		return computePrefixWith((cacheName) -> prefix);
+		return computePrefixWith((cacheName) -> prefix + cacheName + "::");
 	}
 
 	/**
